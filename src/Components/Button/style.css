@@ -1,0 +1,14 @@
+button {
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 26px;
+	letter-spacing: 0.46px;
+	text-transform: uppercase;
+	padding: 15px 9px;
+	border-radius: 4px;
+	background: #F99A0E;
+	color: white;
+	border: none;
+	cursor: pointer;
+}

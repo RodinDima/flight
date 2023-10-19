@@ -1,12 +1,21 @@
 import React from "react";
 
-import "./style.css"
 import { TextFlight } from "../../Constants";
 
+import Profile from "./Image/profile.png";
+
+import { ReactComponent as Bell } from "./Image/bell.svg";
+
+import { ReactComponent as Logo } from "./Image/Logo.svg";
+
+import "./style.css";
+
 const Header = () => {
-	return (
+  return (
     <div className="header__container">
-      <div className="header__logo"></div>
+      <div className="header__logo">
+        <Logo/>
+      </div>
       <div className="header__side">
         <nav className="header__menu menu">
           <ul className="menu">
@@ -32,10 +41,18 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-				<div className="header__profile">
-					<div className="header__notification"></div>
-					<div className="header__user"></div>
-		  </div>
+        <div className="header__profile">
+          <div className="header__notification">
+            <a href="#" className="header__notification-link">
+              <Bell />
+            </a>
+          </div>
+          <div className="header__user">
+            <a href="#">
+              <img src={Profile} alt="myPhoto" />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );

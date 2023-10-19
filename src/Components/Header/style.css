@@ -1,0 +1,146 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+[class$="__container"] {
+  max-width: 1310px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+nav ul {
+  list-style: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  align-items: center;
+}
+.header__logo {
+}
+.header__side {
+  display: flex;
+  gap: 36px;
+}
+.header__menu {
+}
+.menu {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.menu__item {
+}
+.menu__link {
+  color: #424242;
+  font-size: 14px;
+  font-weight: 400;
+}
+.menu__link:hover {
+  color: #1262af;
+}
+
+.header__profile {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.header__notification {
+}
+.header__notification-link {
+}
+.header__user {
+}

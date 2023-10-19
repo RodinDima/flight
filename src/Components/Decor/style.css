@@ -1,0 +1,13 @@
+.decor {
+	position: absolute;
+	top: 57px;
+	left: 36px;
+	background: white;
+	color: var(--text-secondary, rgba(0, 0, 0, 0.60));
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 12px; /* 100% */
+	letter-spacing: 0.15px;
+	padding: 2px;
+}

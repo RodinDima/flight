@@ -1,0 +1,128 @@
+.explore::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(79deg, #114f8b -3.12%, #2a9ad7 103.77%);
+  z-index: -1;
+}
+
+.explore {
+  text-align: center;
+  position: relative;
+  background: url(./Image/bg.png) no-repeat;
+  background-size: cover;
+}
+
+.explore__search {
+  padding-bottom: 167px;
+  display: flex;
+  justify-content: center;
+}
+
+.explore__title {
+  font-family: Baloo Bhai;
+  font-size: 61px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 67px;
+  padding-top: 167px;
+  color: white;
+}
+.explore__text {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  margin-bottom: 43px;
+  color: white;
+}
+.explore__form {
+  background-color: white;
+  max-width: 1120px;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+.explore__form-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  align-items: center;
+}
+.explore__form-text {
+  color: #303030;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+.explore__form-check {
+  display: flex;
+  gap: 29px;
+}
+
+.explore__form-input {
+  display: flex;
+  gap: 10px;
+}
+
+.radio {
+  margin-right: 9px;
+}
+.explore__form-input input {
+  width: 281px;
+  height: 56px;
+  border-radius: 4px;
+  border: 1px solid var(--other-outlined-border, rgba(0, 0, 0, 0.23));
+  position: relative;
+}
+
+.explore__form-input > span:nth-child(2) {
+  color: var(--text-secondary, rgba(0, 0, 0, 0.6));
+  top: 56px;
+  left: 34px;
+  background: white;
+  position: absolute;
+}
+.explore__form-input > span:nth-child(4) {
+  color: var(--text-secondary, rgba(0, 0, 0, 0.6));
+  top: 56px;
+  left: 340px;
+  background: white;
+  position: absolute;
+}
+.explore__form-check label {
+  color: rgba(48, 48, 48, 0.87);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.15px;
+}
+input {
+  padding: 0px 12px;
+}
+.react-datepicker__view-calendar-icon input {
+  padding: 0px 12px !important;
+}
+
+.explore__form-date {
+  height: 62px;
+}
+
+.react-datepicker__input-container .react-datepicker__calendar-icon {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+.react-datepicker__tab-loop {
+  position: absolute;
+}
+.react-datepicker__input-container .react-datepicker__calendar-icon {
+  opacity: 0.4;
+}
