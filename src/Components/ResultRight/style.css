@@ -1,0 +1,49 @@
+.result__inner {
+  width: 632px;
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
+  padding: 20px;
+}
+.result__block {
+  display: flex;
+
+  justify-content: space-between;
+  margin-bottom: 21px;
+}
+.result__from,
+.result__to {
+  color: #1262ae;
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.96px;
+  text-transform: capitalize;
+}
+
+.result__depart {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.result__depart p {
+  color: #000;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  text-transform: capitalize;
+}
+.result__depart-date {
+  color: #000;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  text-transform: capitalize;
+}

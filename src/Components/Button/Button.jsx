@@ -4,6 +4,6 @@ import "./style.css"
 
 const Button = (props) => {
 	const { buttonText } = props;
-	return <button>{buttonText}</button>;
+	return <button type="submit">{buttonText}</button>;
 };
 export default Button;

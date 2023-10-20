@@ -1,0 +1,12 @@
+.result {
+	margin-bottom: 36px;
+}
+.result__container {
+}
+.result__title {
+	margin-bottom: 20px;
+}
+.result__search {
+	display: flex;
+	gap: 15px;
+}

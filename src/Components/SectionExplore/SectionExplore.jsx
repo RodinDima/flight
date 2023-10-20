@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import "./style.css";
 import { TextFlight } from "../../Constants";
 
 import { Form, Field } from "react-final-form";
@@ -8,9 +7,12 @@ import { Form, Field } from "react-final-form";
 import uk from "date-fns/locale/uk";
 
 import DatePicker from "react-datepicker";
+
 import "react-datepicker/dist/react-datepicker.css";
+
 import Button from "../Button/Button";
 
+import "./style.css";
 
 const onSubmit = async (values) => {
   window.alert(JSON.stringify(values, 0, 2));
@@ -18,7 +20,6 @@ const onSubmit = async (values) => {
 
 const SectionExplore = () => {
   const [selectedDate, setSelectedDate] = useState(null);
-
 
   return (
     <section className="explore">
@@ -29,7 +30,7 @@ const SectionExplore = () => {
           <Form
             initialValues={{ employed: false }}
             onSubmit={onSubmit}
-            render={({ submitting, pristine }) => (
+            render={({}) => (
               <form className="explore__form">
                 <div className="explore__form-top">
                   <label className="explore__form-text">Search flights</label>
@@ -76,7 +77,7 @@ const SectionExplore = () => {
                     placeholder="Arrival"
                   />
                   <span>Arrival</span>
-
+                  <span>Date</span>
                   <DatePicker
                     selected={selectedDate}
                     onChange={(date) => setSelectedDate(date)}
@@ -87,7 +88,7 @@ const SectionExplore = () => {
                     placeholderText="Date"
                     locale={uk}
                   />
-                
+
                   <Button buttonText="Search flights" />
                 </div>
               </form>
@@ -100,5 +101,3 @@ const SectionExplore = () => {
 };
 
 export default SectionExplore;
-
-

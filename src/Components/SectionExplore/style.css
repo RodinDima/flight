@@ -14,6 +14,7 @@
   position: relative;
   background: url(./Image/bg.png) no-repeat;
   background-size: cover;
+  margin-bottom: 69px;
 }
 
 .explore__search {
@@ -84,18 +85,33 @@
 
 .explore__form-input > span:nth-child(2) {
   color: var(--text-secondary, rgba(0, 0, 0, 0.6));
-  top: 56px;
+  top: 52px;
   left: 34px;
   background: white;
   position: absolute;
+  padding: 5px 5px;
 }
 .explore__form-input > span:nth-child(4) {
   color: var(--text-secondary, rgba(0, 0, 0, 0.6));
-  top: 56px;
-  left: 340px;
+  top: 52px;
+  left: 350px;
   background: white;
   position: absolute;
+  padding: 5px 5px;
 }
+.explore__form-input > span:nth-child(5) {
+  color: var(--text-secondary, rgba(0, 0, 0, 0.6));
+  top: 52px;
+  left: 667px;
+  background: white;
+  position: absolute;
+  padding: 5px 5px;
+  z-index: 1;
+}
+.explore__form-input input::placeholder{
+  opacity: .4;
+}
+
 .explore__form-check label {
   color: rgba(48, 48, 48, 0.87);
   font-size: 16px;
@@ -125,4 +141,8 @@ input {
 }
 .react-datepicker__input-container .react-datepicker__calendar-icon {
   opacity: 0.4;
+}
+
+.react-datepicker__input-container react-datepicker__view-calendar-icon {
+cursor: pointer;
 }
