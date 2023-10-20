@@ -1,0 +1,25 @@
+.link {
+  gap: 10px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.72px;
+  color: #1262ae;
+}
+.link__inner a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: end;
+  position: absolute;
+  right: 0;
+  top:20px;
+
+}
+.link span {
+  background-image: url(./image/link.svg);
+  width: 24px;
+  height: 24px;
+  display: block;
+}

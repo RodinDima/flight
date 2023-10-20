@@ -1,11 +1,11 @@
-.trip {
+.holiday {
   margin-bottom: 80px;
 }
-.trip__container {
+.holiday__container {
   box-sizing: border-box;
   position: relative;
 }
-.trip__title {
+.holiday__title {
   color: #1262ae;
   font-family: Roboto;
   font-size: 18px;
@@ -16,13 +16,13 @@
   text-transform: uppercase;
   margin-bottom: 6px;
 }
-.trip__items {
+.holiday__items {
   display: flex;
   gap: 32px;
   justify-content: center;
 }
 
-.trip__item {
+.holiday__item {
   background-repeat: no-repeat;
   height: 182px;
   width: 287px;
@@ -30,21 +30,21 @@
   color: white;
 }
 
-.trip__inner {
+.holiday__inner {
   display: flex;
   justify-content: space-between;
   padding-top: 12px;
   padding: 0 12px;
   padding-top: 8px;
 }
-.trip__country {
+.holiday__country {
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.4px;
 }
-.trip__text {
+.holiday__text {
   color: #fff;
   text-align: right;
   font-family: Roboto;
@@ -55,7 +55,7 @@
   letter-spacing: 0.64px;
   text-transform: uppercase;
 }
-.trip__price {
+.holiday__price {
   text-align: right;
   font-family: Baloo Bhai;
   font-size: 38px;
