@@ -1,0 +1,27 @@
+.prepare {
+    margin-bottom: 80px;
+}
+.prepare__container {
+}
+.prepare__title {
+  margin-bottom: 20px;
+  color: #cecece;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
+}
+.prepare__items {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.prepare__item {
+}
+.prepare__item-img {
+  margin-bottom: 8px;
+}
+.prepare__item-text {
+}

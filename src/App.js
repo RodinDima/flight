@@ -4,6 +4,7 @@ import Header from './Components/Header/Header';
 import Prepare from './Components/Prepare/Prepare';
 import Result from './Components/Results/Result';
 import SectionExplore from './Components/SectionExplore/SectionExplore';
+import Trip from './Components/Trip/Trip';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <Header />
       <SectionExplore />
       <Result />
-      <Prepare/>
+      <Prepare />
+      <Trip/>
     
     </>
   );

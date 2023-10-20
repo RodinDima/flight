@@ -1,12 +1,19 @@
 .result {
-	margin-bottom: 36px;
+  margin-bottom: 36px;
 }
 .result__container {
 }
 .result__title {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
+  color: #303030;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
 }
 .result__search {
-	display: flex;
-	gap: 15px;
+  display: flex;
+  gap: 15px;
 }
