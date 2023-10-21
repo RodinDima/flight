@@ -23,22 +23,22 @@ const Header = () => {
           <nav className="header__menu menu">
             <ul className="menu">
               <li className="menu__item">
-                <a href="" className="menu__link">
+                <a href="#" className="menu__link">
                   {TextFlight.header.linkOne}
                 </a>
               </li>
               <li className="menu__item">
-                <a href="" className="menu__link">
+                <a href="#" className="menu__link">
                   {TextFlight.header.linkTwo}
                 </a>
               </li>
               <li className="menu__item">
-                <a href="" className="menu__link">
+                <a href="#" className="menu__link">
                   {TextFlight.header.linkThree}
                 </a>
               </li>
               <li className="menu__item">
-                <a href="" className="menu__link">
+                <a href="#" className="menu__link">
                   {TextFlight.header.linkFour}
                 </a>
               </li>
