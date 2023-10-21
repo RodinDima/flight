@@ -12,12 +12,14 @@ const Prepare = () => {
           <h2 className="prepare__title">Prepare for your trip</h2>
           <div className="prepare__items">
             {Prep.map((item, index) => (
-              <div className="prepare__item" key={index}>
-                <div className="prepare__item-img">
-						<img src={item.img} alt="" />
-					 </div>
-                <p className="prepare__item-text">{item.text}</p>
-              </div>
+              <a className="prepare__link" href="#">
+                <div className="prepare__item" key={index}>
+                  <div className="prepare__item-img">
+                    <img src={item.img} alt="" />
+                  </div>
+                  <p className="prepare__item-text">{item.text}</p>
+                </div>
+              </a>
             ))}
           </div>
         </div>
