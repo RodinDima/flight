@@ -1,5 +1,5 @@
 import React from "react";
-import { TextFlight } from "../../Constants";
+
 import Title from "../Title/Title";
 
 import { Dest } from "../../ConstantsOb";

@@ -6,16 +6,14 @@ import ResultRight from "../ResultRight/ResultRight";
 import "./style.css";
 
 const Result = () => {
-	return (
+  return (
     <section className="result">
       <div className="result__container">
-				<h3 className="result__title">Recent Searches</h3>
-				<div className="result__search">
-					<ResultLeft />
-					<ResultRight />
-				</div>
-       
-        
+        <h3 className="result__title">Recent Searches</h3>
+        <div className="result__search">
+          <ResultLeft />
+          <ResultRight />
+        </div>
       </div>
     </section>
   );
