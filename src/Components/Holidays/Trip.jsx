@@ -21,7 +21,6 @@ const Holiday = () => {
               </div>
               <p className="holiday__country">{item.country}</p>
               <p className="holiday__text">{item.text}</p>
-
               <p className="holiday__price">{item.price}</p>
             </div>
           ))}
