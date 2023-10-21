@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from 'axios';
 
 import { TextFlight } from "../../Constants";
 
@@ -18,11 +19,46 @@ const onSubmit = async (values) => {
   window.alert(JSON.stringify(values, 0, 2));
 };
 
+
+// async function fetchData() {
+//   try {
+//     const response = await axios.get('https://dummyjson.com/products');
+//     return response.data;
+//   } catch (error) {
+//     console.log('error', error);
+//     throw error;
+//   }
+// }
+
 const SectionExplore = () => {
   const [selectedDate, setSelectedDate] = useState(null);
+  const [data, setData] = useState(null);
 
+
+
+  useEffect(() => {
+    const fetchDataAsync = async () => {
+      try {
+        const response = await axios.get('https://dummyjson.com/products');
+        setData(response.data);
+      } catch (error) {
+        console.log('error', error);
+        throw error;
+      }
+    }
+
+    fetchDataAsync();
+  }, [])
+  
+
+  console.log('data', data);
   return (
     <section className="explore">
+      <div>
+        {data.products.map((item) => (
+          <div key={item.id}>{item.title}</div>
+        ))}
+      </div>
       <div className="explore__container">
         <h2 className="explore__title">{TextFlight.explore.title}</h2>
         <h1 className="explore__text">{TextFlight.explore.text}</h1>
