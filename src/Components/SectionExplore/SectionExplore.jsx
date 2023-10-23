@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from 'axios';
+import axios from "axios";
 
 import { TextFlight } from "../../Constants";
 
@@ -19,7 +19,6 @@ const onSubmit = async (values) => {
   window.alert(JSON.stringify(values, 0, 2));
 };
 
-
 // async function fetchData() {
 //   try {
 //     const response = await axios.get('https://dummyjson.com/products');
@@ -34,31 +33,28 @@ const SectionExplore = () => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [data, setData] = useState(null);
 
+  //useEffect(() => {
+  //  const fetchDataAsync = async () => {
+  //    try {
+  //      const response = await axios.get('https://dummyjson.com/products');
+  //      setData(response.data);
+  //    } catch (error) {
+  //      console.log('error', error);
+  //      throw error;
+  //    }
+  //  }
 
+  //  fetchDataAsync();
+  //}, [])
 
-  useEffect(() => {
-    const fetchDataAsync = async () => {
-      try {
-        const response = await axios.get('https://dummyjson.com/products');
-        setData(response.data);
-      } catch (error) {
-        console.log('error', error);
-        throw error;
-      }
-    }
-
-    fetchDataAsync();
-  }, [])
-  
-
-  console.log('data', data);
+  console.log("data", data);
   return (
     <section className="explore">
-      <div>
+      {/*<div>
         {data.products.map((item) => (
           <div key={item.id}>{item.title}</div>
         ))}
-      </div>
+      </div>*/}
       <div className="explore__container">
         <h2 className="explore__title">{TextFlight.explore.title}</h2>
         <h1 className="explore__text">{TextFlight.explore.text}</h1>
@@ -102,8 +98,9 @@ const SectionExplore = () => {
                     component="input"
                     type="text"
                     placeholder="Departure"
+                    id="departure"
                   />
-                  <span>Departure</span>
+                  <label for="departure">Departure</label>
 
                   <Field
                     className="arrival"
@@ -111,9 +108,10 @@ const SectionExplore = () => {
                     component="input"
                     type="text"
                     placeholder="Arrival"
+                    id="arrival"
                   />
-                  <span>Arrival</span>
-                  <span>Date</span>
+                  <label for="arrival">Arrival</label>
+                  <label for="date">Date</label>
                   <DatePicker
                     selected={selectedDate}
                     onChange={(date) => setSelectedDate(date)}
@@ -123,6 +121,7 @@ const SectionExplore = () => {
                     yearDropdownItemNumber={40}
                     placeholderText="Date"
                     locale={uk}
+                    id="date"
                   />
 
                   <Button buttonText="Search flights" />

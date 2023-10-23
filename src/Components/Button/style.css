@@ -11,4 +11,9 @@ button {
 	color: white;
 	border: none;
 	cursor: pointer;
+	transition: all .7s;
+}
+
+button:hover{
+opacity: .6;
 }

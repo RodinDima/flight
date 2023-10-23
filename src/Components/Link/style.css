@@ -14,12 +14,30 @@
   justify-content: end;
   position: absolute;
   right: 0;
-  top:20px;
-
+  top: 20px;
+  transition: all .5s;
 }
+
+.link__inner a:hover {
+  color: #030e1a;
+}
+
 .link span {
   background-image: url(./image/link.svg);
   width: 24px;
   height: 24px;
   display: block;
+}
+.link__inner span {
+  transform: translateX(0);
+  transition: all 0.4s;
+}
+
+.link__inner span:hover {
+  transform: translateX(50%);
+}
+
+.link:hover .link__inner span {
+  transform: translateX(50%);
+  opacity: 0.6;
 }

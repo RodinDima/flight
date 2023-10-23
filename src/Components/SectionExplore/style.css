@@ -65,6 +65,11 @@
 .explore__form-check {
   display: flex;
   gap: 29px;
+  cursor: pointer;
+}
+
+.explore__form-check label {
+  cursor: pointer;
 }
 
 .explore__form-input {
@@ -83,7 +88,11 @@
   position: relative;
 }
 
-.explore__form-input > span:nth-child(2) {
+explore__form-input label {
+cursor: pointer;
+}
+
+.explore__form-input > label:nth-child(2) {
   color: var(--text-secondary, rgba(0, 0, 0, 0.6));
   top: 52px;
   left: 34px;
@@ -91,7 +100,7 @@
   position: absolute;
   padding: 5px 5px;
 }
-.explore__form-input > span:nth-child(4) {
+.explore__form-input > label:nth-child(4) {
   color: var(--text-secondary, rgba(0, 0, 0, 0.6));
   top: 52px;
   left: 350px;
@@ -99,7 +108,7 @@
   position: absolute;
   padding: 5px 5px;
 }
-.explore__form-input > span:nth-child(5) {
+.explore__form-input > label:nth-child(5) {
   color: var(--text-secondary, rgba(0, 0, 0, 0.6));
   top: 52px;
   left: 667px;
@@ -145,4 +154,8 @@ input {
 
 .react-datepicker__input-container react-datepicker__view-calendar-icon {
 cursor: pointer;
+}
+
+.radio {
+  cursor: pointer;
 }
