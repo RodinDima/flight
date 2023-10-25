@@ -1,11 +1,11 @@
-.holiday {
+.stays {
   margin-bottom: 80px;
 }
-.holiday__container {
+.stays__container {
   box-sizing: border-box;
   position: relative;
 }
-.holiday__title {
+.stays__title {
   color: #1262ae;
   font-family: Roboto;
   font-size: 18px;
@@ -16,26 +16,26 @@
   text-transform: uppercase;
   margin-bottom: 6px;
 }
-.holiday__items {
+.stays__items {
   display: flex;
   gap: 32px;
   justify-content: center;
 }
 
-.holiday__item {
+.stays__item {
   border: 1px solid #eaeaea;
 
   border-radius: 0px 0px 10px 10px;
 }
 
-.holiday__inner {
+.stays__inner {
   display: flex;
   justify-content: space-between;
   padding-top: 12px;
   padding: 0 12px;
   padding-top: 8px;
 }
-.holiday__country {
+.stays__country {
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -44,7 +44,7 @@
   color: #424242;
   margin-bottom: 3px;
 }
-.holiday__text {
+.stays__text {
   font-family: Roboto;
   font-size: 16px;
   font-style: normal;
@@ -54,7 +54,7 @@
   text-transform: uppercase;
   color: #999;
 }
-.holiday__price {
+.stays__price {
   font-family: Baloo Bhai;
   font-size: 38px;
   font-style: normal;
@@ -63,7 +63,7 @@
   padding-right: 12px;
   color: #1262af;
 }
-.holiday__content {
+.stays__content {
   display: flex;
   align-items: center;
   justify-content: space-between;

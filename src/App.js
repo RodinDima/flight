@@ -1,10 +1,11 @@
 
 import './App.css';
 import Header from './Components/Header/Header';
-import Holiday from './Components/Holidays/Trip';
+import Holiday from './Components/Holidays/Holiday';
 import Prepare from './Components/Prepare/Prepare';
 import Result from './Components/Results/Result';
 import SectionExplore from './Components/SectionExplore/SectionExplore';
+import Stays from './Components/Stays/Stays';
 import Trip from './Components/Trip/Trip';
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
       <Result />
       <Prepare />
       <Trip />
-      <Holiday/>
+      <Holiday />
+      <Stays/>
     
     </>
   );
