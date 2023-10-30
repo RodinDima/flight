@@ -1,0 +1,18 @@
+.posts__container {
+}
+.inner {
+}
+.item {
+  background-color: rgb(200, 255, 0);
+}
+.post__title {
+  color: blueviolet;
+}
+.post__body {
+  color: brown;
+}
+.post__tags {
+  color: rgb(255, 0, 0);
+}
+.post__reaction {
+}

@@ -1,60 +1,24 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
 import { TextFlight } from "../../Constants";
-
 import { Form, Field } from "react-final-form";
-
 import uk from "date-fns/locale/uk";
-
 import DatePicker from "react-datepicker";
-
 import "react-datepicker/dist/react-datepicker.css";
-
 import Button from "../Button/Button";
-
 import "./style.css";
 
 const onSubmit = async (values) => {
   window.alert(JSON.stringify(values, 0, 2));
 };
 
-// async function fetchData() {
-//   try {
-//     const response = await axios.get('https://dummyjson.com/products');
-//     return response.data;
-//   } catch (error) {
-//     console.log('error', error);
-//     throw error;
-//   }
-// }
+
 
 const SectionExplore = () => {
   const [selectedDate, setSelectedDate] = useState(null);
-  const [data, setData] = useState(null);
 
-  //useEffect(() => {
-  //  const fetchDataAsync = async () => {
-  //    try {
-  //      const response = await axios.get('https://dummyjson.com/products');
-  //      setData(response.data);
-  //    } catch (error) {
-  //      console.log('error', error);
-  //      throw error;
-  //    }
-  //  }
-
-  //  fetchDataAsync();
-  //}, [])
-
-  console.log("data", data);
   return (
     <section className="explore">
-      {/*<div>
-        {data.products.map((item) => (
-          <div key={item.id}>{item.title}</div>
-        ))}
-      </div>*/}
       <div className="explore__container">
         <h2 className="explore__title">{TextFlight.explore.title}</h2>
         <h1 className="explore__text">{TextFlight.explore.text}</h1>
@@ -62,10 +26,12 @@ const SectionExplore = () => {
           <Form
             initialValues={{ employed: false }}
             onSubmit={onSubmit}
-            render={({}) => (
+            render={() => (
               <form className="explore__form">
                 <div className="explore__form-top">
-                  <label className="explore__form-text">Search flights</label>
+                  <label className="explore__form-text">
+                    Пошук авіаквитків
+                  </label>
                   <div className="explore__form-check">
                     <label>
                       <Field
@@ -75,7 +41,7 @@ const SectionExplore = () => {
                         type="radio"
                         value="Return"
                       />
-                      Return
+                      Туди і назад
                     </label>
 
                     <label>
@@ -86,7 +52,7 @@ const SectionExplore = () => {
                         type="radio"
                         value="One-way"
                       />
-                      One-way
+                      В один бік
                     </label>
                   </div>
                 </div>
@@ -97,21 +63,21 @@ const SectionExplore = () => {
                     name="firstField"
                     component="input"
                     type="text"
-                    placeholder="Departure"
+                    placeholder="Відправлення"
                     id="departure"
                   />
-                  <label for="departure">Departure</label>
+                  <label for="departure">Відправлення</label>
 
                   <Field
                     className="arrival"
                     name="SecondField"
                     component="input"
                     type="text"
-                    placeholder="Arrival"
+                    placeholder="Прибуття"
                     id="arrival"
                   />
-                  <label for="arrival">Arrival</label>
-                  <label for="date">Date</label>
+                  <label for="arrival">Прибуття</label>
+                  <label for="date">Дата</label>
                   <DatePicker
                     selected={selectedDate}
                     onChange={(date) => setSelectedDate(date)}
@@ -119,12 +85,12 @@ const SectionExplore = () => {
                     showIcon
                     scrollableYearDropdown
                     yearDropdownItemNumber={40}
-                    placeholderText="Date"
+                    placeholderText="Дата"
                     locale={uk}
                     id="date"
                   />
 
-                  <Button buttonText="Search flights" />
+                  <Button buttonText="Пошук авіаквитків" />
                 </div>
               </form>
             )}
