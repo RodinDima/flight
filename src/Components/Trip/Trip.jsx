@@ -1,14 +1,54 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+import axios from "axios";
 
 import { TextFlight } from "../../Constants";
-import Title from "../Title/Title";
 
-import { Dest } from "../../ConstantsOb";
+import Title from "../Title/Title";
 import Link from "../Link/Link";
 
 import "./style.css";
 
 const Trip = () => {
+  const [data, setData] = useState({});
+  const [dataTwo, setDataTwo] = useState({});
+
+  useEffect(() => {
+    const AsyncFetch = async () => {
+      try {
+        const response = await axios.get("https://dummyjson.com/products/1");
+        if (response.data && typeof response.data === "object") {
+          setData(response.data);
+        } else {
+          console.log("Дані не було отримано або не є об'єктом.");
+        }
+      } catch (error) {
+        console.error("Помилка під час отримання даних:", error);
+      }
+    };
+
+    AsyncFetch();
+  }, []);
+
+  useEffect(() => {
+    const AsyncFetchTwo = async () => {
+      try {
+        const response = await axios.get("https://dummyjson.com/products/2");
+        if (response.data && typeof response.data === "object") {
+          setDataTwo(response.data);
+        } else {
+          console.log("Дані не було отримано або не є об'єктом.");
+        }
+      } catch (error) {
+        console.error("Помилка під час отримання даних:", error);
+      }
+    };
+
+    AsyncFetchTwo();
+  }, []);
+
+  console.log("dataTwo", dataTwo);
+
   return (
     <section className="trip">
       <div className="trip__container">
@@ -16,20 +56,46 @@ const Trip = () => {
         <Title textTitle="Most Popular Destinations" />
         <Link linkText="View all destinations" />
         <a href="#" className="trip__items">
-          {Dest.map((item, index) => (
-            <div
-              className="trip__item"
-              key={index}
-              style={{ backgroundImage: `url(${item.img})` }}
-            >
-              <div className="trip__inner">
-                <p className="trip__country">{item.country}</p>
-                <p className="trip__text">{item.text}</p>
-              </div>
-
-              <p className="trip__price">{item.price}</p>
+          <div
+            className="trip__item"
+            style={{ backgroundImage: `url(${dataTwo.thumbnail})` }}
+          >
+            <div className="trip__inner">
+              <p className="trip__country">{dataTwo.title}</p>
+              <p className="trip__text">{dataTwo.description}</p>
             </div>
-          ))}
+            <p className="trip__price">{dataTwo.price}</p>
+          </div>
+          <div
+            className="trip__item"
+            style={{ backgroundImage: `url(${data.thumbnail})` }}
+          >
+            <div className="trip__inner">
+              <p className="trip__country">{data.title}</p>
+              <p className="trip__text">{data.description}</p>
+            </div>
+            <p className="trip__price">{data.price}</p>
+          </div>
+          <div
+            className="trip__item"
+            style={{ backgroundImage: `url(${data.thumbnail})` }}
+          >
+            <div className="trip__inner">
+              <p className="trip__country">{data.title}</p>
+              <p className="trip__text">{data.description}</p>
+            </div>
+            <p className="trip__price">{data.price}</p>
+          </div>
+          <div
+            className="trip__item"
+            style={{ backgroundImage: `url(${data.thumbnail})` }}
+          >
+            <div className="trip__inner">
+              <p className="trip__country">{data.title}</p>
+              <p className="trip__text">{data.description}</p>
+            </div>
+            <p className="trip__price">{data.price}</p>
+          </div>
         </a>
       </div>
     </section>

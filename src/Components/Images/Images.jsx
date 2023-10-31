@@ -24,7 +24,7 @@ const Images = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="img__container">
         <div className="image__container">{<img src={imageURL} alt="" />}</div>
         <div className="image__container">{<img src={imageURL} alt="" />}</div>
         <div className="image__container">{<img src={imageURL} alt="" />}</div>
