@@ -24,8 +24,13 @@
 
 .holiday__item {
   border: 1px solid #eaeaea;
-
   border-radius: 0px 0px 10px 10px;
+  width: 288px;
+}
+
+.holiday__img img {
+  max-width: 288px;
+  height: 242px;
 }
 
 .holiday__inner {

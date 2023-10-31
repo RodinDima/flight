@@ -2,6 +2,7 @@
 import './App.css';
 import Header from './Components/Header/Header';
 import Holiday from './Components/Holidays/Holiday';
+import Images from './Components/Images/Images';
 import Posts from './Components/Posts/Posts';
 import Prepare from './Components/Prepare/Prepare';
 import Result from './Components/Results/Result';
@@ -19,7 +20,8 @@ function App() {
       <Trip />
       <Holiday />
       <Stays/>
-    <Posts/>
+      <Posts />
+      <Images/>
     </>
   );
 }

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
+
 import axios from "axios";
+
 import "./style.css";
 
 const Posts = () => {
@@ -23,19 +25,19 @@ const Posts = () => {
   }, []);
 
   return (
-   <div className="posts__container">
-   	 <div className="inner">
-	      {data.map((item, index) => (
-	        <div className="item" key={index}>
-	          <h2 className="post__title">{item.title}</h2>
-	          <div className="post__body">{item.body}</div>
-	          <div className="post__tags">{item.tags}</div>
-	          <div className="post__reaction">{item.reactions}</div>
-	          <div className="post__tags">{item.tags}</div>
-	        </div>
-	      ))}
-	    </div>
-   </div>
+    <div className="posts__container">
+      <div className="inner">
+        {data.map((item, index) => (
+          <div className="item" key={index}>
+            <h2 className="post__title">{item.title}</h2>
+            <div className="post__body">{item.body}</div>
+            <div className="post__tags">{item.tags}</div>
+            <div className="post__reaction">{item.reactions}</div>
+            <div className="post__tags">{item.tags}</div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 

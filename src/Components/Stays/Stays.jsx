@@ -12,7 +12,7 @@ const Stays = () => {
       try {
         const response = await axios.get("https://dummyjson.com/carts/");
         if (Array.isArray(response.data.carts)) {
-          setData(response.data.carts.slice(1, 4));
+          setData(response.data.carts.slice(0, 4));
         } else {
           console.log("Дані не є масивом.");
         }
@@ -35,16 +35,14 @@ const Stays = () => {
           {data.map((cart, index) => (
             <div className="stays__item" key={index}>
               <div className="stays__img">
-                {cart.products.slice(0, 1).map((product, productIndex) => (
-                  <img key={productIndex} src={product.thumbnail} />
-                ))}
+                <img src={cart.products[1].thumbnail} />
               </div>
               <div className="stays__content">
                 <div className="stays__text-left">
-                  <p className="stays__country">{cart.title}</p>
-                  <p className="stays__text">{cart.total}</p>
+                  <p className="stays__text">{cart.products[1].title}</p>
                 </div>
-                <p className="stays__price">{cart.userId}</p>
+                <p className="stays__price">{cart.products[1].price}$</p>
+                <p className="stays__price">{cart.products[1].id}</p>
               </div>
               <div className="stays__product-photos"></div>
             </div>

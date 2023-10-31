@@ -18,14 +18,18 @@
 }
 .stays__items {
   display: flex;
-  gap: 32px;
-  justify-content: center;
+  justify-content: space-around;
+ 
 }
 
 .stays__item {
   border: 1px solid #eaeaea;
-
   border-radius: 0px 0px 10px 10px;
+  max-width: 296px;
+}
+
+  .stays__img img{
+  max-width: 270px;
 }
 
 .stays__inner {

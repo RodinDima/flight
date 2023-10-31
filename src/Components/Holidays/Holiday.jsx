@@ -12,7 +12,7 @@ const Holiday = () => {
       try {
         const response = await axios.get("https://dummyjson.com/products");
         if (Array.isArray(response.data.products)) {
-          setData(response.data.products.slice(1,4));
+          setData(response.data.products.slice(4,8));
           console.log(data);
         } else {
           console.log("Дані не є масивом.");
