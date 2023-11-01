@@ -10,7 +10,8 @@ const Images = () => {
   useEffect(() => {
     const fetchImage = async () => {
       try {
-        const response = await axios.get("https://image.dummyjson.com/400x200");
+        const response = await axios.get("https://image.dummyjson.com/300");
+        console.log(response);
 
         const imageUrl = response.request.responseURL;
 

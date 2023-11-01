@@ -10,8 +10,8 @@ import Link from "../Link/Link";
 import "./style.css";
 
 const Trip = () => {
-  const [data, setData] = useState({});
-  const [dataTwo, setDataTwo] = useState({});
+  const [data, setData] = useState([]);
+  
 
   useEffect(() => {
     const AsyncFetch = async () => {
@@ -34,8 +34,11 @@ const Trip = () => {
     const AsyncFetchTwo = async () => {
       try {
         const response = await axios.get("https://dummyjson.com/products/2");
+        console.log(response)
         if (response.data && typeof response.data === "object") {
-          setDataTwo(response.data);
+          console.log("before", data);
+          data.push(response.data);
+          console.log("after", data)
         } else {
           console.log("Дані не було отримано або не є об'єктом.");
         }
@@ -47,7 +50,7 @@ const Trip = () => {
     AsyncFetchTwo();
   }, []);
 
-  console.log("dataTwo", dataTwo);
+  
 
   return (
     <section className="trip">
@@ -58,13 +61,13 @@ const Trip = () => {
         <a href="#" className="trip__items">
           <div
             className="trip__item"
-            style={{ backgroundImage: `url(${dataTwo.thumbnail})` }}
+            style={{ backgroundImage: `url(${data.thumbnail})` }}
           >
             <div className="trip__inner">
-              <p className="trip__country">{dataTwo.title}</p>
-              <p className="trip__text">{dataTwo.description}</p>
+              <p className="trip__country">{data.title}</p>
+              <p className="trip__text">{data.description}</p>
             </div>
-            <p className="trip__price">{dataTwo.price}</p>
+            <p className="trip__price">{data.price}</p>
           </div>
           <div
             className="trip__item"

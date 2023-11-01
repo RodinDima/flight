@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Title from "../Title/Title";
 import Link from "../Link/Link";
+
 import "./style.css";
 
 const Holiday = () => {
