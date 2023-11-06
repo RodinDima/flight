@@ -7,10 +7,13 @@ import { TextFlight } from "../../Constants";
 import Title from "../Title/Title";
 import Link from "../Link/Link";
 
+import { RotatingLines } from "react-loader-spinner";
+
 import "./style.css";
 
 const Trip = () => {
   const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   
 
   useEffect(() => {
@@ -24,30 +27,13 @@ const Trip = () => {
         }
       } catch (error) {
         console.error("Помилка під час отримання даних:", error);
+      } finally {
+        setIsLoading(false)
       }
+      
     };
 
     AsyncFetch();
-  }, []);
-
-  useEffect(() => {
-    const AsyncFetchTwo = async () => {
-      try {
-        const response = await axios.get("https://dummyjson.com/products/2");
-        console.log(response)
-        if (response.data && typeof response.data === "object") {
-          console.log("before", data);
-          data.push(response.data);
-          console.log("after", data)
-        } else {
-          console.log("Дані не було отримано або не є об'єктом.");
-        }
-      } catch (error) {
-        console.error("Помилка під час отримання даних:", error);
-      }
-    };
-
-    AsyncFetchTwo();
   }, []);
 
   
@@ -59,6 +45,18 @@ const Trip = () => {
         <Title textTitle="Most Popular Destinations" />
         <Link linkText="View all destinations" />
         <a href="#" className="trip__items">
+          
+          {isLoading ? (
+            <div className="loader">
+            <RotatingLines
+              strokeColor="grey"
+              strokeWidth={5}
+              animationDuration={750}
+              width={96}
+              visible={true}
+            />
+          </div>
+          ):(
           <div
             className="trip__item"
             style={{ backgroundImage: `url(${data.thumbnail})` }}
@@ -69,36 +67,9 @@ const Trip = () => {
             </div>
             <p className="trip__price">{data.price}</p>
           </div>
-          <div
-            className="trip__item"
-            style={{ backgroundImage: `url(${data.thumbnail})` }}
-          >
-            <div className="trip__inner">
-              <p className="trip__country">{data.title}</p>
-              <p className="trip__text">{data.description}</p>
-            </div>
-            <p className="trip__price">{data.price}</p>
-          </div>
-          <div
-            className="trip__item"
-            style={{ backgroundImage: `url(${data.thumbnail})` }}
-          >
-            <div className="trip__inner">
-              <p className="trip__country">{data.title}</p>
-              <p className="trip__text">{data.description}</p>
-            </div>
-            <p className="trip__price">{data.price}</p>
-          </div>
-          <div
-            className="trip__item"
-            style={{ backgroundImage: `url(${data.thumbnail})` }}
-          >
-            <div className="trip__inner">
-              <p className="trip__country">{data.title}</p>
-              <p className="trip__text">{data.description}</p>
-            </div>
-            <p className="trip__price">{data.price}</p>
-          </div>
+         
+          )}
+        
         </a>
       </div>
     </section>
