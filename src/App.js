@@ -10,22 +10,24 @@ import Result from './Components/Results/Result';
 import SectionExplore from './Components/SectionExplore/SectionExplore';
 import Stays from './Components/Stays/Stays';
 import Trip from './Components/Trip/Trip';
+//import { Counter } from './features/counter/counter';
 
-import { Counter } from './features/counter/Counter.js';
+//import { Counter } from './features/counter/Counter.js';
 
 function App() {
   return (
     <>
-      <Counter/>
+      {/*<Counter/>*/}
       <Header />
       <SectionExplore />
-      {/*<Result />
+      <Result />
       <Prepare />
-      <Trip />*/}
+      <Trip />
       <Holiday />
-      {/*<Stays/>
+      <Stays/>
       <Posts />
-      <Images/>
+      <Images />
+      <ProductDetails/>
     </>
   );
 }

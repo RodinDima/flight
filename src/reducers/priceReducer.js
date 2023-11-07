@@ -4,14 +4,27 @@ import {
   fetchPriceRequest,
   fetchPriceSucces,
   fetchPriceFailed,
-  setPrice
+  setPrice,
 } from "../actions/priceActions";
 
 const initialState = {
-    price: null,
-    loading: false,
-    error: null,
-}
+  products: [
+    {
+      product: {
+        id: 1,
+        price: 10,
+      },
+    },
+    {
+      product: {
+        id: 2,
+        price: 20,
+      },
+    },
+  ],
+  loading: false,
+  error: null,
+};
 
 const priceReducer = createReducer(initialState, (builder) => {
   builder
